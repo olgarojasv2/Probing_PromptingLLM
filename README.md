@@ -1,4 +1,4 @@
-# Research Proposal: Investigating LLM's Internal Representation of Stories
+# Is Bella's and Edwards's wedding represented seamlessly in the book and the movie? #
 
 ## Research Question
 
