@@ -89,15 +89,19 @@ The following genres are considered for classification:
 
 Use Precision, Recall, and F1 Score to evaluate the model's performance.
 
-### Classification Report
-Zero-Shot Classification Report
-Category	Precision	Recall	F1-Score	Support
-Electronic	0.00	0.00	0.00	3
-Hip-Hop	0.67	0.67	0.67	3
-Indie	0.00	0.00	0.00	0
-Pop	0.17	0.33	0.22	3
-Rock	0.00	0.00	0.00	6
-unknown	0.00	0.00	0.00	0
+## Classification Report
+
+### Zero-Shot Classification Report
+
+| Category   | Precision | Recall | F1-Score | Support |
+|------------|-----------|--------|----------|---------|
+| Electronic | 0.00      | 0.00   | 0.00     | 3       |
+| Hip-Hop    | 0.67      | 0.67   | 0.67     | 3       |
+| Indie      | 0.00      | 0.00   | 0.00     | 0       |
+| Pop        | 0.17      | 0.33   | 0.22     | 3       |
+| Rock       | 0.00      | 0.00   | 0.00     | 6       |
+| unknown    | 0.00      | 0.00   | 0.00     | 0       |
+
 Accuracy: 0.20
 
 Macro Average: Precision 0.14, Recall 0.17, F1-Score 0.15
@@ -106,13 +110,16 @@ Weighted Average: Precision 0.17, Recall 0.20, F1-Score 0.18
 
 Total Support: 15
 
-Few-Shot Classification Report
-Category	Precision	Recall	F1-Score	Support
-Electronic	0.00	0.00	0.00	3
-Hip-Hop	0.67	0.67	0.67	3
-Pop	0.00	0.00	0.00	3
-Rock	0.33	0.50	0.40	6
-unknown	0.00	0.00	0.00	0
+### Few-Shot Classification Report
+
+| Category   | Precision | Recall | F1-Score | Support |
+|------------|-----------|--------|----------|---------|
+| Electronic | 0.00      | 0.00   | 0.00     | 3       |
+| Hip-Hop    | 0.67      | 0.67   | 0.67     | 3       |
+| Pop        | 0.00      | 0.00   | 0.00     | 3       |
+| Rock       | 0.33      | 0.50   | 0.40     | 6       |
+| unknown    | 0.00      | 0.00   | 0.00     | 0       |
+
 Accuracy: 0.33
 
 Macro Average: Precision 0.20, Recall 0.23, F1-Score 0.21
@@ -120,6 +127,9 @@ Macro Average: Precision 0.20, Recall 0.23, F1-Score 0.21
 Weighted Average: Precision 0.27, Recall 0.33, F1-Score 0.29
 
 Total Support: 15
+
+## Discussion
+
 
 ## Discussion
 
