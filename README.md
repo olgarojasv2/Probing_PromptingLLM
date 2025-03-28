@@ -1,6 +1,7 @@
-# Is Bella's and Edwards's wedding represented seamlessly in the book and the movie? #
+# Probing & Prompting LLM #
 
-## Research Question
+## Part 1
+### Research Question
 
 The initial question posed—*“Is an LLM’s internal representation of a story closer to the book or the movie version?”*—is quite broad. To refine it, we propose the following research question:
 
@@ -52,3 +53,40 @@ A histogram was generated to show the **distribution of similarity scores**, pro
 
 ### Conclusion
 By using both **textual (TF-IDF) and semantic (SBERT) similarity metrics**, we can quantitatively assess whether an LLM aligns more with books or movies. Preliminary results suggest that while movies simplify dialogue, key themes and phrases remain recognizable. The LLM’s output will provide further insight into which medium it models more closely.
+---------------------------------------------------------------------------------------------------
+## Part 2
+
+# Genre Annotation with Ollama
+
+## Overview
+
+This repository provides an approach for genre annotation of song lyrics using **Ollama**, a large language model, through Zero-Shot and Few-Shot prompting strategies. By leveraging **Ollama**'s ability to classify text into predefined categories, we can automatically predict the genre of a given set of lyrics.
+
+The following genres are considered for classification:
+- **Rock**
+- **Pop**
+- **Hip-Hop**
+- **Electronic**
+- **R&B**
+- **Country**
+- **Jazz**
+- **Metal**
+- **Indie**
+- **Folk**
+
+## Files
+
+- **genreLyrics.csv**: A CSV file containing the song lyrics and their corresponding genre labels.
+- **genre_annotation_script.py**: Python script for performing genre annotation using **Ollama**.
+
+## Requirements
+
+- Python 3.7+
+- **Pandas** library for data manipulation.
+- **Ollama** Python API for interacting with the language model.
+
+### Install required packages:
+
+```bash
+pip install pandas
+pip install ollama
