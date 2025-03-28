@@ -53,6 +53,7 @@ A histogram was generated to show the **distribution of similarity scores**, pro
 
 ### Conclusion
 By using both **textual (TF-IDF) and semantic (SBERT) similarity metrics**, we can quantitatively assess whether an LLM aligns more with books or movies. Preliminary results suggest that while movies simplify dialogue, key themes and phrases remain recognizable. The LLM’s output will provide further insight into which medium it models more closely.
+
 ---------------------------------------------------------------------------------------------------
 ## Part 2
 
@@ -77,16 +78,58 @@ The following genres are considered for classification:
 ## Files
 
 - **genreLyrics.csv**: A CSV file containing the song lyrics and their corresponding genre labels.
-- **genre_annotation_script.py**: Python script for performing genre annotation using **Ollama**.
+- **Annotator_Ollama.py**: Python script for performing genre annotation using **Ollama**.
 
 ## Requirements
 
-- Python 3.7+
 - **Pandas** library for data manipulation.
-- **Ollama** Python API for interacting with the language model.
+- **Ollama** Python API for interacting with the language model. // Model Llama3
 
-### Install required packages:
+## Evaluation
 
-```bash
-pip install pandas
-pip install ollama
+Use Precision, Recall, and F1 Score to evaluate the model's performance.
+
+### Classification Report
+Zero-Shot Classification Report:
+
+              precision    recall  f1-score   support
+
+  Electronic       0.00      0.00      0.00         3
+     Hip-Hop       0.67      0.67      0.67         3
+       Indie       0.00      0.00      0.00         0
+         Pop       0.17      0.33      0.22         3
+        Rock       0.00      0.00      0.00         6
+     unknown       0.00      0.00      0.00         0
+
+    accuracy                           0.20        15
+   macro avg       0.14      0.17      0.15        15
+weighted avg       0.17      0.20      0.18        15
+Few-Shot Classification Report:
+plaintext
+Copy
+Edit
+              precision    recall  f1-score   support
+
+  Electronic       0.00      0.00      0.00         3
+     Hip-Hop       0.67      0.67      0.67         3
+         Pop       0.00      0.00      0.00         3
+        Rock       0.33      0.50      0.40         6
+     unknown       0.00      0.00      0.00         0
+
+    accuracy                           0.33        15
+   macro avg       0.20      0.23      0.21        15
+weighted avg       0.27      0.33      0.29        15
+
+## Discussion
+
+### Which strategy worked better?
+The Few-Shot strategy generally works better because it leverages a few labelled examples, improving classification performance compared to Zero-Shot.
+
+### Did the model struggle with specific genres?
+Yes, genres such as Indie, Electronic, and Pop were difficult for the model, especially when there were fewer examples or a lack of context in the prompts.
+
+### How could performance be improved?
+
+Few-Shot performance could improve by adding more representative examples for underperforming genres.
+
+Zero-Shot might benefit from adjusting the prompt to be more explicit or providing more guidance on genre distinctions.
