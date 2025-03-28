@@ -55,9 +55,9 @@ A histogram was generated to show the **distribution of similarity scores**, pro
 By using both **textual (TF-IDF) and semantic (SBERT) similarity metrics**, we can quantitatively assess whether an LLM aligns more with books or movies. Preliminary results suggest that while movies simplify dialogue, key themes and phrases remain recognizable. The LLM’s output will provide further insight into which medium it models more closely.
 
 ---------------------------------------------------------------------------------------------------
-## Part 2
+# Part 2
 
-# Genre Annotation with Ollama
+## Genre Annotation with Ollama
 
 ## Overview
 
